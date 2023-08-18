@@ -1,0 +1,74 @@
+﻿<Page
+    x:Class="klitechHazi.BookDetailsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:klitechHazi"
+    xmlns:model="using:klitechHazi.Model"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    d:DesignHeight="3608"
+    d:DesignWidth="7436">
+
+    <Grid Margin="10">
+        <!-- Könyv részletek megjelenítése -->
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Row="0" Margin="0,0,0,10" BorderBrush="Black" BorderThickness="2" Background="LightBlue">
+                    <TextBlock x:Name="titleLabel" FontSize="20" Margin="0,0,0,10"/>
+                    <TextBlock x:Name="authorLabel" Margin="0,0,0,10"/>
+                    <TextBlock x:Name="isbnLabel" Margin="0,0,0,10"/>
+                    <TextBlock x:Name="pagesLabel" Margin="0,0,0,10"/>
+                    <TextBlock x:Name="publisherLabel" Margin="0,0,0,10"/>
+                    <TextBlock x:Name="countryLabel" Margin="0,0,0,10"/>
+                    <TextBlock x:Name="mediaTypeLabel" Margin="0,0,0,10"/>
+                    <TextBlock x:Name="releasedLabel" Margin="0,0,0,10"/>
+
+                    <!-- Vissza gomb -->
+                    <Button Content="Vissza" Click="BackButton_Click" HorizontalAlignment="Left" Margin="0,20,0,0"/>
+                </StackPanel>
+
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Grid.Column="0" Background="LightGreen" BorderBrush="Black" BorderThickness="2" Padding="10">
+                        <!-- Szereplők -->
+                        <TextBlock Text="Szereplők:" FontSize="16" FontWeight="Bold" Margin="0,10,0,5"/>
+                        <ScrollViewer VerticalScrollBarVisibility="Auto">
+                            <ListBox x:Name="charactersListBox" Margin="0,0,0,10">
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate x:DataType="x:String">
+                                        <Button Content="{Binding Name}" Click="Character_Click" Margin="0,0,0,5"/>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
+                        </ScrollViewer>
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="1" Background="LightPink" BorderBrush="Black" BorderThickness="2" Padding="10">
+                        <!-- POV szereplők -->
+                        <TextBlock Text="POV Szereplők:" FontSize="16" FontWeight="Bold" Margin="0,10,0,5"/>
+                        <ScrollViewer VerticalScrollBarVisibility="Auto">
+                            <ListBox x:Name="povCharactersListBox" Margin="0,0,0,10">
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate x:DataType="x:String">
+                                        <Button Content="{Binding Name}" Click="Character_Click" Margin="0,0,0,5"/>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
+                        </ScrollViewer>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+</Page>
