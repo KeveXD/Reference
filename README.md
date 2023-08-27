@@ -10,3 +10,7 @@ These projects are my works, one of which is still in progress while another one
 * UWP: Game Of Thrones
 
   This is a client-side application written for the Universal Windows Platform that fetches data about the Game of Thrones Books from an API. Within the application, these data can be navigated. It displays and lists information about characters and houses.
+
+* JAVA: Keverintus
+
+  This is a labyrinth game where you have to escape from monsters, collect treasures, and find your way out of the maze. The application is documented and certain parts of it are also tested using JUnit technology (framework). I developed the application in Java, following the principles of Object-Oriented programming.
