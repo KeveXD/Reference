@@ -14,3 +14,8 @@ These projects are my works, one of which is still in progress while another one
 * JAVA: Keverintus
 
   This is a labyrinth game where you have to escape from monsters, collect treasures, and find your way out of the maze. The application is documented and certain parts of it are also tested using JUnit technology (framework). I developed the application in Java, following the principles of Object-Oriented programming.
+  
+ * aiMotive example app
+
+    The task description I followed is in the exam2.pdf file. In the application, the second page appears when you click on the key button.
+
