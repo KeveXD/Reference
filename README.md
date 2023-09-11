@@ -17,5 +17,5 @@ These projects are my works, one of which is still in progress while another one
   
  * aiMotive example app
 
-    The task description I followed is in the exam2.pdf file. In the application, the second page appears when you click on the key button.
+    The task description I followed is in the exam2.pdf file. The app is under the example folder. In the application, the second page appears when you click on the key button.
 
